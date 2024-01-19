@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin:auto;
+        }
+        .container {
+            margin:auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center center;
+            align-items: center center;
+        }
+        thead{
+            padding:20px;
+        }
+        tr{
+            border:1px solid black;
+            box-shadow: 20px 5px 5px gray;
+        }
+        tbody{
+            padding:20px;
+        }
+        td {
+            padding:20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <table>
+            <tr border="1">
+                <thead>
+                    <th>{{profile.name}}</th>
+                </thead>
+                <tbody>
+                    <td>{{profile.email}}</td>
+                </tbody>
+                <td>{{profile.phoneno}}</td>
+
+            </tr>
+            <tr>
+                <thead>
+                    <th>Education: </th>
+                </thead>
+                <tbody>
+                    <td>{{profile.university}}</td>
+                </tbody>
+                <tbody>
+                    <td>{{profile.degree}}</td>
+                </tbody>
+                <td>{{profile.school}}</td>
+            </tr>
+            <tr>
+                <thead>
+                    <th>Skills: </th>
+                </thead>
+                <tbody>
+                    <td>{{profile.skills}}</td>
+                </tbody>
+            </tr>
+            <tr>
+                <thead>
+                    <th>About You: </th>
+                </thead>
+                <tbody>
+                    <td>{{profile.about_you}}</td>
+                </tbody>
+            </tr>
+            <tr>
+                <thead>
+                    <th>Previous Work: </th>
+                </thead>
+                <tbody>
+                    <td>{{profile.previous_work}}</td>
+                </tbody>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>

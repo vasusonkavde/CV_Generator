@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>IT Student Resume</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .resume-section {
+            background-color: #5ee9f6;
+            opacity: 0.5;
+            color: #050505;
+            padding: 30px;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+
+        h2 {
+            color: #ffffff;
+        }
+
+        h4 {
+            color: #ffffff;
+        }
+
+        .degree-info {
+            color: #17a2b8;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+
+            <!-- Personal Information Section -->
+            <div class="row resume-section">
+                <div class="col-md-6">
+                    <h2>{{profile.name}}</h2>
+                    <p>Email: {{profile.email}}</p>
+                    <p>Phone: {{profile.phoneno}}</p>
+                </div>
+                <div class="col-md-6 text-right">
+                    <img src="" alt="Profile Image" class="img-fluid rounded-circle">
+                </div>
+            </div>
+
+            <!-- Education Section -->
+            <div class="resume-section">
+                <h4>Education</h4>
+                <p class="degree-info"><strong>{{profile.degree}}</strong></p>
+                <p>School: {{profile.school}}</p>
+                <p>Graduation Year: 2022</p>
+            </div>
+
+            <!-- Skills Section -->
+            <div class="resume-section">
+                <h4>Skills</h4>
+                <p>{{profile.skills}}</p>
+            </div>
+
+            <!-- Projects Section -->
+            <div class="resume-section">
+                <h4>Projects</h4>
+                <p><strong>Online Bookstore System</strong> - Developed a web-based bookstore system using Java and MySQL.</p>
+                <p><strong>Personal Portfolio Website</strong> - Created a responsive portfolio website using HTML, CSS, and JavaScript.</p>
+            </div>
+
+            <!-- Internship Section -->
+            <div class="resume-section">
+                <h4>About You</h4>
+                <p>{{profile.about_you}}</p>
+            </div>
+            
+            <!-- Previous Work -->
+            <div class="resume-section">
+                <h4>Previous Work</h4>
+                <p>{{profile.previous_work}}</p>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

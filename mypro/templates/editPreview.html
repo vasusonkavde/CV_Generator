@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>CV Generator</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row m-5">
+            <div class="col md-12">
+                <h1>CV Generator</h1>
+                <hr>
+            </div>
+        </div>
+
+        <div class="row m-5">
+            <div class="col md-12">
+                {% for x in user_profile %}
+
+                <form method="POST">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="">Name</label>
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" value="{{x.name}}">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Phone</label>
+                        <input type="number" class="form-control" id="phoneno" name="phoneno"
+                            placeholder="Enter your PhoneNo" value="{{x.phoneno}}">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Email</label>
+                        <input type="text" class="form-control" id="email" name="email"
+                            placeholder="Enter your Email" value="{{x.email}}">
+                    </div>
+                    <div class="form-group">
+                        <label for="">school</label>
+                        <input type="text" class="form-control" id="school" name="school"
+                            placeholder="Enter your PhoneNo" value="{{x.school}}">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Degree</label>
+                        <input type="text" class="form-control" id="degree" name="degree"
+                            placeholder="Enter your Degree" value="{{x.degree}}">
+                    </div>
+                    <div class="form-group">
+                        <label for="">University</label>
+                        <input type="text" class="form-control" id="university" name="university"
+                            placeholder="Enter your University" value="{{x.university}}">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Skills</label>
+                        <input type="text" class="form-control" id="skills" name="skills"
+                            placeholder="Enter your Skills" value="{{x.skills}}">
+                    </div>
+                    <div class="form-group">
+                        <label for="">About_you</label>
+                        <input type="text" class="form-control" id="about_you" name="about_you"
+                            placeholder="Enter your about_you" value="{{x.about_you}}">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Previous_work</label>
+                        <input type="text" class="form-control" id="previous_work" name="previous_work"
+                            placeholder="Enter your previous_work" value="{{x.previous_work}}">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

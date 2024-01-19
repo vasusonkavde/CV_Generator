@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Modern Resume</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f2f2f2;
+            color: #333333;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .resume-section {
+            background-color: #ffffff;
+            padding: 30px;
+            margin-top: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #3498db;
+        }
+
+        h4 {
+            color: #333333;
+        }
+
+        .accent-color {
+            color: #e74c3c;
+        }
+
+        .divider {
+            border-top: 1px solid #ccc;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+
+            <!-- Personal Information Section -->
+            <div class="resume-section">
+                <h2 class="text-center">{{profile.name}}</h2>
+                <p class="text-center">Email: {{profile.email}}</p>
+                <p class="text-center">Phone: {{profile.phoneno}}</p>
+            </div>
+
+            <!-- Education Section -->
+            <div class="resume-section">
+                <h4 class="accent-color">Education</h4>
+                <p><strong>{{profile.university}}</strong> - {{profile.degree}}</p>
+                <p>Graduation Year: 2023</p>
+            </div>
+
+            <!-- Work Experience Section -->
+            <div class="resume-section">
+                <h4 class="accent-color">Work Experience</h4>
+                <p>{{profile.previous_work}}</p>
+            </div>
+
+            <!-- Skills Section -->
+            <div class="resume-section">
+                <h4 class="accent-color">Skills</h4>
+                <p>{{profile.skills}}</p>
+            </div>
+
+            <!-- Projects Section -->
+            <div class="resume-section">
+                <h4 class="accent-color">Projects</h4>
+                <p><strong>Project X:</strong> Led a team in creating a revolutionary web application for data analysis.</p>
+                <p><strong>Project Y:</strong> Developed a mobile app that received high praise for its user-friendly interface.</p>
+            </div>
+
+            <!-- Divider -->
+            <div class="divider"></div>
+
+            <!-- Additional Information Section -->
+            <div class="resume-section">
+                <h4 class="accent-color">Additional Information</h4>
+                <p><strong>Languages:</strong> English (Fluent), Spanish (Intermediate)</p>
+                <p><strong>Certifications:</strong> AWS Certified Developer, Scrum Master</p>
+            </div>
+
+            <div class="resume-section">
+                <h4 class="accent-color">About You</h4>
+                <p>{{profile.about_you}}</p>
+            </div>
+
+            <div class="resume-section">
+                <h4 class="accent-color">Previous Work</h4>
+                <p>{{profile.previous_work}}</p>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

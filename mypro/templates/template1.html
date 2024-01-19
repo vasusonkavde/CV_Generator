@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Professional Resume</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .resume-section {
+            background-color: #ffffff;
+            padding: 30px;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+
+        h2 {
+            color: #007bff;
+        }
+
+        h4 {
+            color: #343a40;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+
+            <!-- Personal Information Section -->
+            <div class="resume-section">
+                <h2 class="text-center">{{profile.name}}</h2>
+                <p class="text-center">Email: {{profile.email}}</p>
+                <p class="text-center">Phone: {{profile.phoneno}}</p>
+            </div>
+
+            <!-- Education Section -->
+            <div class="resume-section">
+                <h4>Education</h4>
+                <p><strong>{{profile.university}}</strong></p>
+                <p>Degree: {{profile.degree}}</p>
+                <p>School: {{profile.school}}</p>
+                <p>Graduation Year: 2020</p>
+            </div>
+
+            <!-- Skills Section -->
+            <div class="resume-section">
+                <h4>Skills</h4>
+                <p>{{profile.skills}}</p>
+            </div>
+
+            <!-- About You Section -->
+            <div class="resume-section">
+                <h4>About You</h4>
+                <p>{{profile.about_you}}</p>
+            </div>
+
+            <!-- Previous Work Section -->
+            <div class="resume-section">
+                <h4>Previous Work</h4>
+                <p><strong>{{profile.previous_work}}</strong></p>
+                <p>Duration: January 2021 - Present</p>
+                <p>Responsibilities: Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

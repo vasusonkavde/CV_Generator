@@ -1,0 +1,294 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomePage</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    <style>
+        .anchor {
+            text-decoration: none;
+            color: black
+        }
+
+        .image-container {
+            position: relative;
+            width: 400px;
+            /* Adjust the width as needed */
+            height: 400px;
+            /* Adjust the height as needed */
+        }
+
+        .front-image {
+            position: absolute;
+            top: 50px;
+            left: 0;
+            width: 100%;
+            height: 50%;
+            object-fit: cover;
+            box-shadow: 10px 5px 12px gray;
+        }
+
+        .back-image {
+            position: absolute;
+            bottom: 30px;
+            left: 100px;
+            width: 100%;
+            height: 50%;
+            object-fit: cover;
+            box-shadow: 10px 5px 12px gray;
+        }
+
+        .resume-container {
+            position: relative;
+        }
+
+        .resume-point-container {
+            position: relative;
+        }
+
+        .resume-point {
+            position: relative;
+            transition: background-color 1s ease-in-out, opacity 1s ease-in-out;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            color: #fff;
+            font-weight: bold;
+            display: inline-block;
+            border: 2px solid transparent;
+        }
+
+        .resume-point.active {
+            background-color: #3498db;
+            border: 2px solid #3498db;
+        }
+
+        .resume-point.active~.resume-point {
+            opacity: 1;
+            border: 2px solid #3498db;
+            /* Add this line to set border for previous steps */
+        }
+
+        .resume-steps {
+            opacity: 0;
+            position: absolute;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .resume-steps.active {
+            opacity: 1;
+        }
+
+        @keyframes changeStep {
+
+            0%,
+            100% {
+                opacity: 0;
+            }
+
+            20%,
+            80% {
+                opacity: 1;
+            }
+        }
+
+        .cont-point {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            padding: 30px;
+
+        }
+
+        @media screen and (max-width:400px) {
+            .resumeImg {
+                width: 200px;
+                height: 200px;
+            }
+
+            .image-container {
+                position: relative;
+                width: 150px;
+                /* Adjust the width as needed */
+                height: 200px;
+                /* Adjust the height as needed */
+            }
+
+            .front-image {
+                position: absolute;
+                left: 0;
+                width: 100%;
+                height: 40%;
+                object-fit: cover;
+                box-shadow: 10px 5px 12px gray;
+            }
+
+            .back-image {
+                position: absolute;
+                bottom: 35px;
+                left: 20px;
+                width: 100%;
+                height: 40%;
+                object-fit: cover;
+                box-shadow: 10px 5px 12px gray;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            {% include 'header.html' %}
+        </div> <!--header-->
+
+
+        <div class="row mt-2">
+
+            <!-- <div class="col-md-3">
+
+                 <h4 class="mt-2">Details</h4>
+
+                <hr>
+
+                <a class="anchor" href="/app/accept">Resume Generator</a><br>
+
+                <a class="anchor" href="">Templates</a><br>
+
+                <a class="anchor" href="">Help Us</a><br>
+
+                <hr>
+
+                <h4 class="mt-2">Brand Kit</h4> 
+
+
+
+
+            </div>side panel -->
+
+            <div class="col-6 d-flex flex-column align-items-center justify-content-center">
+                <!-- <div class="row"> -->
+                <div class="col-6 text-center">
+                    <h2>Free Online Resume Builder</h2>
+                    <a href="/app/accept"> <button type="submit" class="btn btn-primary">Create Resume</button> </a>
+                </div>
+                <!-- </div> -->
+            </div>
+            <div class="col-6">
+                <img src="{% static 'images/resume.jpg' %}" alt="Error" class="resumeImg" width="400px" height="400px">
+
+            </div>
+
+
+        </div><!-- product row (row2)-->
+
+        <div class="row text-center mt-5">
+            <h1>Say Goodbye To Generic Resumes And <br>
+                Hello To Your Dream Job - Build Yours Today!</h1>
+        </div>
+
+        <div class="row">
+
+            <div class="col-6">
+                <div class="image-container">
+                    <img class="front-image" src="{% static 'images/homePage.jpg' %}" width="400px" height="400px"
+                        alt="Front Image">
+                    <img class="back-image" src="{% static 'images/chooseResume.jpg' %}" width="400px" height="400px"
+                        alt="Back Image">
+                </div>
+            </div>
+
+            <div class="col-6 mt-5">
+                <div class="d-flex mt-3">
+                    <i class="bi bi-boxes"></i>
+
+                    <h6 style="margin-left: 2rem;">Intuitive Resume Builder</h6>
+                </div>
+                <div class="d-flex mt-3">
+                    <i class="bi bi-bag-dash"></i>
+
+                    <h6 style="margin-left: 2rem;">A Resume Customized to your Job</h6>
+                </div>
+                <div class="d-flex mt-3">
+                    <i class="bi bi-emoji-smile"></i>
+
+                    <h6 style="margin-left: 2rem;">User - Friendly</h6>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="mt-3 mb-4">
+            <div>
+                <h2>How to make resume</h2>
+            </div>
+            <div class="cont-point">
+                <div class="resume-point-container">
+                    <div class="resume-point active" id="step1">1</div>
+                    <div class="resume-point" id="step2">2</div>
+                    <div class="resume-point" id="step3">3</div>
+                    <div class="resume-point" id="step4">4</div>
+                    <div class="resume-point" id="step5">5</div>
+                </div>
+                <div class="resume-container">
+                    <div class="resume-steps active" id="step1">
+                        <h5>Start creating for free.</h5>
+                    </div>
+                    <div class="resume-steps" id="step2">
+                        <h5>Explore templates.</h5>
+                    </div>
+                    <div class="resume-steps" id="step3">
+                        <h5>Add eye-catching visuals.</h5>
+                    </div>
+                    <div class="resume-steps" id="step4">
+                        <h5>Make it yours.</h5>
+                    </div>
+                    <div class="resume-steps" id="step5">
+                        <h5>Share your resume.</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-5 bg-info text-light">
+
+            {% include 'footer.html' %}
+        </div>
+
+
+    </div> <!--second row-->
+
+    </div>
+    <script>
+        const steps = document.querySelectorAll('.resume-steps');
+        const pointsteps = document.querySelectorAll('.resume-point');
+        let currentStep = 0;
+        let curStep = 0;
+
+        function showNextStep() {
+            steps[currentStep].classList.remove('active');
+            currentStep = (currentStep + 1) % steps.length;
+            steps[currentStep].classList.add('active');
+
+            pointsteps[curStep].classList.remove('active');
+            curStep = (curStep + 1) % pointsteps.length;
+            pointsteps[curStep].classList.add('active');
+
+        }
+
+        setInterval(showNextStep, 4000);
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>

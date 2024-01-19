@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Resume</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            color: #495057;
+        }
+
+        .container {
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-top: 50px;
+            border-radius: 10px;
+        }
+
+        h1,
+        h2,
+        h3 {
+            color: #007bff;
+        }
+
+        .section-heading {
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .experience-item,
+        .education-item {
+            border-left: 2px solid #007bff;
+            padding-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        .skill-badge {
+            background-color: #007bff;
+            color: #ffffff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            margin-right: 5px;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header class="text-center mb-4">
+            {% for x in user_profile %}
+                <h1>{{x.name}}</h1>
+                <p>Web Developer</p>
+            {% endfor %}
+        </header>
+
+        <section>
+            <div class="section-heading">
+                <h2>Contact Information</h2>
+            </div>
+            <address>
+                <p>Email: your.email@example.com</p>
+                <p>Phone: (123) 456-7890</p>
+                <p>LinkedIn: linkedin.com/in/yourprofile</p>
+                <p>GitHub: github.com/yourusername</p>
+            </address>
+        </section>
+
+        <section>
+            <div class="section-heading">
+                <h2>Summary</h2>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus
+                ante dapibus diam.</p>
+        </section>
+
+        <section>
+            <div class="section-heading">
+                <h2>Experience</h2>
+            </div>
+            <div class="experience-item">
+                <h3>Job Title 1</h3>
+                <p>Company Name, Location | January 20XX - Present</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus ante dapibus diam.</p>
+            </div>
+            <div class="experience-item">
+                <h3>Job Title 2</h3>
+                <p>Company Name, Location | July 20XX - December 20XX</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus ante dapibus diam.</p>
+            </div>
+        </section>
+
+        <section>
+            <div class="section-heading">
+                <h2>Education</h2>
+            </div>
+            <div class="education-item">
+                <h3>Degree Name</h3>
+                <p>University Name, Location | Graduation Date</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed cursus ante dapibus diam.</p>
+            </div>
+        </section>
+
+        <section>
+            <div class="section-heading">
+                <h2>Skills</h2>
+            </div>
+            <div>
+                <span class="skill-badge">HTML</span>
+                <span class="skill-badge">CSS</span>
+                <span class="skill-badge">JavaScript</span>
+                <span class="skill-badge">Bootstrap</span>
+                <!-- Add more skills as needed -->
+            </div>
+        </section>
+    </div>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

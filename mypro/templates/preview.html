@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preview</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+     <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .container {
+            padding:30px;
+            box-shadow:  10px 5px 12px gray;
+        }
+     </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Name: {{user_profile.name}}</h2>
+        <h2>Phone No: {{user_profile.phoneno}}</h2>
+        <h2>Email: {{user_profile.email}}</h2>
+
+        <hr>
+
+        <h1 class="mt-4">Skills</h1>
+        <p>{{user_profile.skills}}</p>
+
+        <hr>
+
+        <h1 class="mt-4">Education</h1>
+        <ul class="list-unstyled">
+            <li>{{user_profile.degree}} from {{user_profile.university}}</li>
+        </ul>
+
+        <hr>
+
+        <p class="mt-4">About You: {{user_profile.about_you}}</p>
+        <p>Previous Work: {{user_profile.previous_work}}</p>
+
+        <hr>
+
+        <div class="mt-4">
+            <a href="/app/edit/{{uid}}" class="btn btn-primary"><i class="bi bi-pencil-square"></i> Edit Profile</a>
+            <a href="/app/choose-template/{{uid}}" class="btn btn-danger">Choose Templates</a>
+        </div>
+    </div>
+</body>
+
+</html>

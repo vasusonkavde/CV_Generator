@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Two-Column Resume</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f5f5f5;
+            color: #333333;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .resume-section {
+            background-color: #ffffff;
+            padding: 30px;
+            margin-top: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .left-column {
+            float: left;
+            text-align: center;
+            width: 45%;
+            display: flex;
+            flex-direction: column;
+            /* align-items: center;
+            justify-content: center; */
+            place-items: center;
+
+        }
+
+        .small-cont {
+            padding:20px;
+        }
+
+        .right-column {
+            float: right;
+            width: 45%;
+        }
+
+        h2 {
+            color: #3498db;
+        }
+
+        h4 {
+            color: #333333;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-10">
+
+                <!-- Left Column: Name, Phone, Email -->
+                <div class="resume-section left-column">
+                    <h2>{{profile.name}}</h2>
+                    <p>Phone: {{profile.phoneno}}</p>
+                    <p>Email: {{profile.email}}</p>
+                </div>
+
+                <!-- Right Column: University, Degree, School, About You, Previous Work -->
+                <div class="resume-section right-column">
+                    <div class="small-cont">
+                        <h4>Education</h4>
+                        <p><strong>{{profile.university}}</strong></p>
+                        <p>Degree: {{profile.degree}}</p>
+                        <p>School: {{profile.school}}</p>
+                    </div>
+
+                    <div class="small-cont">
+                        <h4>About You</h4>
+                        <p>{{profile.about_you}}</p>
+                    </div>
+
+                    <div class="small-cont">
+                        <h4>Previous Work</h4>
+                        <p>{{profile.previous_work}}</p>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
